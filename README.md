@@ -1,3 +1,7 @@
+# Fork from ngx-sortablejs v11 to newest versions of Angular
+
+v12 => Angular 12
+
 # ngx-sortablejs
 
 This package is an Angular 2+ binding for [Sortable.js](https://github.com/RubaXa/Sortable). Supports standard arrays and Angular `FormArray`.
