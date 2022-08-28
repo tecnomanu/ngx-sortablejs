@@ -1,6 +1,7 @@
 # Fork from ngx-sortablejs v11 to newest versions of Angular
 
-v12 => Angular 12
+v12 => Angular v12
+v13 => Angular v13
 
 # ngx-sortablejs
 
