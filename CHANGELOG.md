@@ -1,3 +1,10 @@
+# [13.2.0](https://github.com/tecnomanu/ngx-sortablejs-plus/compare/v13.1.0...v13.2.0) (2022-08-29)
+
+
+### Features
+
+* 🎸 Update version 13.0.1 ([f703949](https://github.com/tecnomanu/ngx-sortablejs-plus/commit/f703949e0a580eeff5a445f3a01e5cd6683eb85b))
+
 # [13.1.0](https://github.com/tecnomanu/ngx-sortablejs/compare/v13.0.0...v13.1.0) (2022-08-28)
 
 
