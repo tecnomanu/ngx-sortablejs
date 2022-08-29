@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngx-sortablejs-plus-app": {
+    "ngx-sortablejs-app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ngx-sortablejs-plus-app",
+            "outputPath": "dist/ngx-sortablejs-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -69,18 +69,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ngx-sortablejs-plus-app:build"
+            "browserTarget": "ngx-sortablejs-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ngx-sortablejs-plus-app:build:production"
+              "browserTarget": "ngx-sortablejs-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ngx-sortablejs-plus-app:build"
+            "browserTarget": "ngx-sortablejs-app:build"
           }
         },
         "test": {
@@ -117,17 +117,17 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ngx-sortablejs-plus-app:serve"
+            "devServerTarget": "ngx-sortablejs-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ngx-sortablejs-plus-app:serve:production"
+              "devServerTarget": "ngx-sortablejs-app:serve:production"
             }
           }
         }
       }
     },
-    "ngx-sortablejs-plus": {
+    "ngx-sortablejs": {
       "projectType": "library",
       "root": "projects/ngx-sortablejs",
       "sourceRoot": "projects/ngx-sortablejs/src",
@@ -163,5 +163,5 @@
       }
     }
   },
-  "defaultProject": "ngx-sortablejs-plus-app"
+  "defaultProject": "ngx-sortablejs-app"
 }
