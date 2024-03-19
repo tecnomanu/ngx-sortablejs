@@ -2,6 +2,8 @@
 
 v12 => Angular v12
 v13 => Angular v13
+v14 => Lost :( sorry
+v15 => Angular v15
 
 # ngx-sortablejs
 
@@ -33,7 +35,7 @@ imports: [
   // ...
   SortablejsModule.forRoot({ animation: 150 }),
   // ...
-]
+];
 ```
 
 Then import `SortablejsModule` into the other angular modules where you want to use it:
@@ -43,7 +45,7 @@ imports: [
   // ...
   SortablejsModule,
   // ...
-]
+];
 ```
 
 Then use `sortablejs` property on a container HTML element to tell Angular that this is a sortable container; also pass the `items` array to both `*ngFor` and `[sortablejs]` to register the changes automatically.
@@ -58,19 +60,19 @@ Then use `sortablejs` property on a container HTML element to tell Angular that 
 ## Simple sortable list
 
 ```typescript
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-    selector: 'my-app',
-    template: `
-      <h2>Drag / drop the item</h2>
-      <div [sortablejs]="items">
-        <div *ngFor="let item of items">{{ item }}</div>
-      </div>
-    `
+  selector: "my-app",
+  template: `
+    <h2>Drag / drop the item</h2>
+    <div [sortablejs]="items">
+      <div *ngFor="let item of items">{{ item }}</div>
+    </div>
+  `,
 })
 export class AppComponent {
-   items = [1, 2, 3, 4, 5];
+  items = [1, 2, 3, 4, 5];
 }
 ```
 
@@ -79,25 +81,25 @@ export class AppComponent {
 Pass the options with `sortablejsOptions` property.
 
 ```typescript
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-    selector: 'my-app',
-    template: `
-      <h2>Drag / drop the item</h2>
-      <div [sortablejs]="items" [sortablejsOptions]="{ animation: 150 }">
-        <div *ngFor="let item of items">{{ item }}</div>
-      </div>
-    `
+  selector: "my-app",
+  template: `
+    <h2>Drag / drop the item</h2>
+    <div [sortablejs]="items" [sortablejsOptions]="{ animation: 150 }">
+      <div *ngFor="let item of items">{{ item }}</div>
+    </div>
+  `,
 })
 export class AppComponent {
-   items = [1, 2, 3, 4, 5];
+  items = [1, 2, 3, 4, 5];
 }
 ```
 
 ### Tracking lists update events
 
-You can use the options' `onUpdate` method to track the changes (see also *Passing the options* section):
+You can use the options' `onUpdate` method to track the changes (see also _Passing the options_ section):
 
 ```ts
 constructor() {
@@ -130,6 +132,7 @@ but note, that here you will be able to take the whole changed array only (no ol
 ### Updating the options
 
 You can pass a new options object at anytime via the `[sortablejsOptions]` binding and the Angular's change detection will check for the changes from the previous options and will call the low level option setter from [Sortable.js](https://github.com/RubaXa/Sortable) to set the new option values.
+
 > Note: It will only detect changes when a brand new options object is passed, not deep changes.
 
 ### Drag & drop between two lists
@@ -137,12 +140,12 @@ You can pass a new options object at anytime via the `[sortablejsOptions]` bindi
 The only thing which should be done is assigning the `group` option to the both list. Everything else is handled automatically.
 
 ```typescript
-import { Component } from '@angular/core';
-import { SortablejsOptions } from 'ngx-sortablejs';
+import { Component } from "@angular/core";
+import { SortablejsOptions } from "ngx-sortablejs";
 
 @Component({
-    selector: 'my-app',
-    template: `
+  selector: "my-app",
+  template: `
     <h2>Drag / drop the item</h2>
     <h3>list 1</h3>
     <div class="items1" [sortablejs]="items1" [sortablejsOptions]="options">
@@ -152,15 +155,15 @@ import { SortablejsOptions } from 'ngx-sortablejs';
     <div class="items2" [sortablejs]="items2" [sortablejsOptions]="options">
       <div *ngFor="let item of items2">{{ item }}</div>
     </div>
-    `
+  `,
 })
 export class AppComponent {
-   items1 = [1, 2, 3, 4, 5];
-   items2 = ['a', 'b', 'c', 'd', 'e'];
+  items1 = [1, 2, 3, 4, 5];
+  items2 = ["a", "b", "c", "d", "e"];
 
-   options: SortablejsOptions = {
-     group: 'test'
-   };
+  options: SortablejsOptions = {
+    group: "test",
+  };
 }
 ```
 
@@ -171,12 +174,12 @@ The clone mode is similar to the one above (of course the proper Sortablejs sett
 If you want to clone the item being sorted in a different manner, you can provide `sortablejsCloneFunction` as a parameter. This function receives an item and should return a clone of that item.
 
 ```typescript
-import { Component } from '@angular/core';
-import { SortablejsOptions } from 'ngx-sortablejs';
+import { Component } from "@angular/core";
+import { SortablejsOptions } from "ngx-sortablejs";
 
 @Component({
-    selector: 'my-app',
-    template: `
+  selector: "my-app",
+  template: `
     <h2>Drag / drop the item</h2>
     <h3>list 1</h3>
     <div class="items1" [sortablejs]="items1" [sortablejsOptions]="options" [sortablejsCloneFunction]="myCloneImplementation">
@@ -186,14 +189,12 @@ import { SortablejsOptions } from 'ngx-sortablejs';
     <div class="items2" [sortablejs]="items2" [sortablejsOptions]="options" [sortablejsCloneFunction]="myCloneImplementation">
       <div *ngFor="let item of items2">{{ item }}</div>
     </div>
-    `
+  `,
 })
 export class AppComponent {
-
   myCloneImplementation = (item) => {
     return item; // this is what happens if sortablejsCloneFunction is not provided. Add your stuff here
-  }
-
+  };
 }
 ```
 
@@ -213,10 +214,10 @@ imports: [
   // ...
   // any properties and events available on original library work here as well
   SortablejsModule.forRoot({
-    animation: 150
+    animation: 150,
   }),
   // ...
-]
+];
 ```
 
 This value will be used as a default one, but it can be overwritten by a local `sortablejsOptions` property.
