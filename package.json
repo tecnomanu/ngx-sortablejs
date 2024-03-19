@@ -1,6 +1,6 @@
 {
     "name": "ngx-sortablejs-app",
-    "version": "v15.1.0",
+    "version": "v15.0.0",
     "scripts": {
         "ng": "ng",
         "start": "ng serve",
