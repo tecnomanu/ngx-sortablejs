@@ -22,10 +22,7 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "src/styles.scss",
               "node_modules/bootstrap/dist/css/bootstrap.css"
@@ -86,17 +83,11 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss"],
             "scripts": []
           }
         },
@@ -108,9 +99,7 @@
               "tsconfig.spec.json",
               "e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
@@ -127,41 +116,38 @@
         }
       }
     },
-    "ngx-sortablejs": {
+    "ngx-sortablejs-plus": {
       "projectType": "library",
-      "root": "projects/ngx-sortablejs",
-      "sourceRoot": "projects/ngx-sortablejs/src",
+      "root": "projects/ngx-sortablejs-plus",
+      "sourceRoot": "projects/ngx-sortablejs-plus/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "tsConfig": "projects/ngx-sortablejs/tsconfig.lib.json",
-            "project": "projects/ngx-sortablejs/ng-package.json"
+            "tsConfig": "projects/ngx-sortablejs-plus/tsconfig.lib.json",
+            "project": "projects/ngx-sortablejs-plus/ng-package.json"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ngx-sortablejs/src/test.ts",
-            "tsConfig": "projects/ngx-sortablejs/tsconfig.spec.json",
-            "karmaConfig": "projects/ngx-sortablejs/karma.conf.js"
+            "polyfills": ["zone.js", "zone.js/testing"],
+            "tsConfig": "projects/ngx-sortablejs-plus/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-sortablejs-plus/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/ngx-sortablejs/tsconfig.lib.json",
-              "projects/ngx-sortablejs/tsconfig.spec.json"
+              "projects/ngx-sortablejs-plus/tsconfig.lib.json",
+              "projects/ngx-sortablejs-plus/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
     }
-  },
-  "defaultProject": "ngx-sortablejs-app"
+  }
 }
