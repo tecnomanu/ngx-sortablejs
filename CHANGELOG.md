@@ -1,3 +1,20 @@
+# [14.0.0](https://github.com/tecnomanu/ngx-sortablejs-plus/compare/v13.2.0...v14.0.0) (2024-03-19)
+
+
+### Features
+
+* :rotating_light: Update for angular 15 ([3e92b61](https://github.com/tecnomanu/ngx-sortablejs-plus/commit/3e92b617f2910ef460fda688179a093b2ef8d14b))
+* 🎸 Fixes on build release ([071da35](https://github.com/tecnomanu/ngx-sortablejs-plus/commit/071da35548e468f64e1c232b243e8af692b84868))
+* angular upgrade ([f89572a](https://github.com/tecnomanu/ngx-sortablejs-plus/commit/f89572a1e7e75176f52fec37b29ecb0d85f79c32))
+* update to new version ([e61ae91](https://github.com/tecnomanu/ngx-sortablejs-plus/commit/e61ae912b96ed6103ed4fa48a9dc579a55434c2d))
+* version ngx-sortablejs-plus for angular 15 ([acf107f](https://github.com/tecnomanu/ngx-sortablejs-plus/commit/acf107f55f53b472d52cf0c47afd02dcb03ad975))
+
+
+### BREAKING CHANGES
+
+* Now is valid for angular 15
+* Change to angular 15
+
 # [13.2.0](https://github.com/tecnomanu/ngx-sortablejs-plus/compare/v13.1.0...v13.2.0) (2022-08-29)
 
 
