@@ -27,5 +27,8 @@
         "projects/ngx-sortablejs-plus/*"
       ]
     }
+  },
+  "angularCompilerOptions": {
+    "compilationMode": "partial"
   }
 }
