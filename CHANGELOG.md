@@ -1,3 +1,15 @@
+# [15.0.0](https://github.com/tecnomanu/ngx-sortablejs-plus/compare/v14.0.0...v15.0.0) (2024-03-19)
+
+
+### Features
+
+* :bug: upgrade version to 15 ([1fe81b1](https://github.com/tecnomanu/ngx-sortablejs-plus/commit/1fe81b1518d86bb90dc7c95c51100f4bd3a583a4))
+
+
+### BREAKING CHANGES
+
+* upgrade to version 15
+
 # [14.0.0](https://github.com/tecnomanu/ngx-sortablejs-plus/compare/v13.2.0...v14.0.0) (2024-03-19)
 
 
