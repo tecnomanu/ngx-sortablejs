@@ -1,3 +1,10 @@
+## [15.0.1](https://github.com/tecnomanu/ngx-sortablejs-plus/compare/v15.0.0...v15.0.1) (2024-03-19)
+
+
+### Bug Fixes
+
+* :bug: upgrade version peerDependencies ([5aba0cc](https://github.com/tecnomanu/ngx-sortablejs-plus/commit/5aba0ccfbefa7058fcdefe7e64237b765406b682))
+
 # [15.0.0](https://github.com/tecnomanu/ngx-sortablejs-plus/compare/v14.0.0...v15.0.0) (2024-03-19)
 
 
